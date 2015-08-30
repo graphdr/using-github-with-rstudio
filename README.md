@@ -11,18 +11,29 @@ Richard Layton
 Update R and RStudio
 ====================
 
-If you don't have R and RStudio installed, [install R](https://www.r-project.org), then [install RStudio](https://www.rstudio.com/products/rstudio/).
+If you don't have R and RStudio installed, start by installing R then RStudio, in that order.
 
-If you have, perhaps the first thing you should do is [update R](http://www.r-statistics.com/2015/06/a-step-by-step-screenshots-tutorial-for-upgrading-r-on-windows/) and update RStudio to the most recent versions.
+-   [install R](https://www.r-project.org)
+-   [install RStudio](https://www.rstudio.com/products/rstudio/)
 
-You should probably update your packages too. Open RStudio. In the `Files, Plots, Packages, Help` pane, select the Packages tab -\> Update.
+If R and RStudio are installed, it's probably a good idea to update them.
 
-<img src="visuals/update-packages.png" width="600">
+-   [update R](http://www.r-statistics.com/2015/06/a-step-by-step-screenshots-tutorial-for-upgrading-r-on-windows/).
+-   To update RStudio, open RStudio. In the *Help* pull-down menu, select *Check for updates*.
 
+    <img src="visuals/update-RStudio.png" width="500">
+
+<!-- save this for after the .Renviron file is set
+You should probably update your packages too. Open RStudio. Select the *Packages* tab and *Update*. Then *Select All* and *Install Updates*. 
+
+<img src="visuals/update-packages.png" width="500">
+-->
 GitHub
 ======
 
 Go to <https://github.com> and sign up for an account.
+
+Remember your GitHub user name and email address for the next step.
 
 Git
 ===
@@ -34,63 +45,94 @@ Install Git using the appropriate method for your platform:
 -   Fedora/RedHat: sudo yum install git-core
 
 <!--Go to the Git program directory, find Git -> cmd -> git-gui.exe. On my Windows machine, I place a shortcut to this file on my desktop.-->
-### Setting your GitHub account information
+### Configure Git
 
-Go to the Git program directory, find Git -\> git-bash.exe. Run the file.
+Go to the Git program directory, find *git-bash.exe*. Run the file.
 
-in the "shell" window that appears, type
+In the shell window that appears, type (but no quotes),
 
-`git config --global user.name your-github-user-name`
+    git config --global user.name "your_github_user_name" 
 
-return, then type
+and return/enter. On the new line, type
 
-`git config --global user.email your-github-email@somewhere`
+    git config --global user.email "your_github_email@somewhere"
 
-return.
+and return/enter. Close the shell. We're done with Git.
 
-### Set the RStudio option for the Git executable file
+### Set the RStudio option for Git
 
 Open RStudio.
 
-Tools -\> Global Options -\> Git/SVN. In the dialog box for *Git executable*, write the path to the git.exe file, for example, `C:/Program Files/Git/bin/git.exe`.
+From the *Tools* pull-down menu, select *Global Options*, then *Git/SVN*. In the dialog box for *Git executable*, write the path to the file *git.exe* on your machine. For example, the path on my machine is `C:/Program Files/Git/bin/git.exe`.
 
-Create a project directory
-==========================
+<img src="visuals/rstudio-git-svn-dialog-box.png" width="400">
 
-In any convenient directory, create a new project folder. This directory will be your local repository of materials that will appear on GitHub. The name of this directory will be also be the name of the GitHub repository.
+Connecting your local R project to GitHub
+=========================================
 
-### Make this directory a repository
+There are several approaches to getting started with an R project and GitHub. I'm going to cover just two cases:
 
-Run the git-gui.exe file. In the dialog box, Select *Create a New Repository*.
+-   starting a new R project that includes a GitHub repository
+-   creating a GitHub repository for an existing R project
 
-<img src="visuals/git-gui-exe.png" width="300">
+In both cases, I begin by setting up a new repository ("repo") on GitHub.
 
-Browse to the location of the project directory you just created and press the *Create* button.
+### Create a repository on GitHub
 
-You can close the Gut GUI window.
+Login to GitHub. Select the *Repositories* tab, then *New*.
 
-### Make this directory an R project
+<img src="visuals/github-new-repo.png" width="500">
 
-In RStudio, File -\> New Project -\> Existing Directory, again browse to the project folder, then Select Folder -\> Create Project.
+Assign a name to the repository, short and memorable.
 
-### .Renviron file
+-   If this is a new project, use any convenient name, for example *test-project*. This name will also be used for the name of the project directory on your computer.
 
-Use File -\> New File -\> Text File to create an R environment file that will simplify R package updates. Type this one line in the file:
+-   If you are creating a repository for an existing R project, use the name of that project directory or create a new (and possibly shorter) name---then on your computer change the name of the directory to match.
 
-`R_LIBS_USER="C:/R/library"`
+<img src="visuals/github-repo-name.png" width="300">
 
-and Save As using the file name `.Renviron` in the top level of your project directory.
+Then click *Create repository*. (You can ignore the initializing options for now.)
 
-### Reality check
+### Starting a new R project
 
-If all is well, the RStudio GUI should show a *Git* tab in the Environment pane. The *Files* tab should show a *.gitignore* file and an *.Rproj* file with the same name as the project directory.
+In RStudio, in the *File* pull-down menu, select *New Project*, then *Version Control*, then *Git*.
 
-<img src="visuals/new-repo-folder.png" width="600">
+<img src="visuals/rstudio-git-repo.png" width="300">
+
+-   Return to your GitHub project repository and find the URL assigned by GitHub. There should be an `HTTPS` label and a URL something like: `https://github.com/your_user_name/test-project.git`. In the text box *Repository URL*, type or paste this URL.
+-   The text box *Project directory name* should automatically populate with the project name, for example, *test-project*.
+-   In the *Create project as a subdirectory of:* box, type the path or browse to the location for the new project folder.
+-   *Create project*.
+
+In the RSudio *Files* pane you should see two files in the new project directory, a *.gitignore* file and a *.Rproj* file.
+
+<img src="visuals/test-project-files-appear.png" width="300">
+
+### Working with an existing R project
+
+stuff
+
+stuff
+
+Create a .Renviron file
+=======================
+
+In RStudio, use *File*, *New File*, *Text File*. Type this one line in the file:
+
+    R_LIBS_USER="C:/R/library"  
+
+and *Save As* using the file name `.Renviron` in the top level of your project directory. This file sets a directory location for R packages that simplifies future R updates. (I recommend placing a copy of this file in the main directory of every RStudio project.)
 
 README files
 ============
 
-Use File -\> New File -\> R Markdown, and OK for the default settings (we'll adjust them later). Save the untitled document as `README.Rmd` at the top level of the example project directory.
+In RStudio, launch your test project (if it's not already open), e.g., *test-project.Rproj*.
+
+Select *File*, *New File*, *R Markdown*, and *OK* for the default settings (we'll adjust them later).
+
+<img src="visuals/untitled-rmd.png" width="500">
+
+Save the untitled document as *README.Rmd* at the top level of the project directory.
 
 Delete all the text in the Rmd file. Edit the YAML header and add one sentence as follows:
 
@@ -100,7 +142,7 @@ Delete all the text in the Rmd file. Edit the YAML header and add one sentence a
         variant: markdown_github
     ---
 
-    Draft README file for GitHub. 
+    Draft README file for GitHub. We will add more later. 
 
 Save.
 
@@ -110,21 +152,20 @@ Press the *Knit* button.
 
 You can close the markdown window that appears.
 
-Knitting this Rmd file with the `markdown_github` output option produces the file *README.md*---this is the README file that we post to GitHub.
+Knitting this Rmd file produces the file *README.md*---this is the README file that we post to GitHub.
 
-GitHub
-======
+If all is well, the RStudio GUI should show a *Git* tab in the Environment pane. The *Files* tab should contain the *.Renviron*, *README.md*, and *README.Rmd* files.
 
-Return (or login) to your GitHub account.
+<img src="visuals/rstudio-panes-with-md.png" width="400">
 
-Select the *Repositories* tab -\> New Repository. In the New Repository box, type the same name you used for the project directory on your local machine. Then *Create Repository*.
+Commit files to GitHub
+======================
 
-RStudio
-=======
+In the RStudio Environment pane, select the *Git* tab.
 
-Go to the Git tab in the Environment pane. Select the `.gitignore`, `README.md`, and the `filename.Rproj` files to commit to GitHub.
+Check the *.gitignore*, *README.md*, and the *filename.Rproj* files to commit to GitHub.
 
-<img src="visuals/first-commit.png" width="400">
+<img src="visuals/first-commit.png" width="250">
 
 Click the *Commit* button.
 
@@ -132,17 +173,62 @@ In the dialog box that appears, type a commit message, e.g., "initial commit". I
 
 Click the *Commit* button. A message window appears. if there any any problems, read the message carefully. if everything is OK, close the window.
 
+Press the *Push* icon. This "pushes" the files you committed to the GitHub repository. You can close the message window.
+
+Go to you GitHub account. Select the *test-project* repository. You should find the three files you pushed. Ther text of the *README.md* file appears below the list of files.
+
+<img src="visuals/github-initial-commit.png" width="600">
+
+Editing a local file
+====================
+
+In RStudio, open the *README.Rmd* file. Add a new line
+
+    Editing the README file. 
+
+Save.
+
+In the *Git* pane, check the "staged" box for the *README.md* file, commit, message, commit, and push as before.
+
+Return to your GitHub page and you will find the updated README text.
+
+Automating GitHub login when pushing
+====================================
+
+Each time you push files to GitHub, dialog boxes open to ask you yuour GitHub user name and password. These steps can [be automated](https://stat545-ubc.github.io/git06_credential-caching.html).
+
 <!--
 
 
-`git config --global user.name type-your-user-name`
+If this an existing project, 
 
-`git config --global user.email type-your-email@somewhere`
+- edit the directory name if necessary to match the GitHub repository name you just assigned   
+- delete the existing *.Rproj* file (if any) in the main project directory  -->
+<br><br><br><br>
+
+<!--
+### Make this directory a repository
+
+Run the git-gui.exe file. In the dialog box, Select *Create a New Repository*.  
+
+<img src="visuals/git-gui-exe.png" width="300">
+
+Browse to the location of the project directory you just created and press the *Create* button. 
+
+You can close the Gut GUI window.
+
+### Make this directory an R project
+
+In RStudio, File -> New Project -> Existing Directory, again browse to the project folder, then Select Folder -> Create Project. 
+
+
+
 
 -->
-References
-==========
+<!--
+# References
 
-1.  Christopher Gandrud (2015) *Reproducible Research with R and RStudio, 2/e*, Taylor and Francis Group LLC: Boca Raton, FL.
+1. Christopher Gandrud (2015) *Reproducible Research with R and RStudio, 2/e*, Taylor and Francis Group LLC: Boca Raton, FL.   
 
-2.  Josh Paulson (2015, Jul) [Version control with Git and SVN](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN).
+1. Josh Paulson (2015, Jul) [Version control with Git and SVN](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN). 
+-->
