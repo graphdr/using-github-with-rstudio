@@ -6,21 +6,23 @@ Getting started with GitHub via RStudio
 =======================================
 
 Richard Layton
-2015-08-25
+2015-08-29
 
 Update R and RStudio
 ====================
 
 If you don't have R and RStudio installed, [install R](https://www.r-project.org), then [install RStudio](https://www.rstudio.com/products/rstudio/).
 
-If you have, perhaps the first thing you should do is [update R](http://www.r-statistics.com/2015/06/a-step-by-step-screenshots-tutorial-for-upgrading-r-on-windows/) and update RStudio to the most recent versions. You should probably update your packages too.
+If you have, perhaps the first thing you should do is [update R](http://www.r-statistics.com/2015/06/a-step-by-step-screenshots-tutorial-for-upgrading-r-on-windows/) and update RStudio to the most recent versions.
+
+You should probably update your packages too. Open RStudio. In the `Files, Plots, Packages, Help` pane, select the Packages tab -\> Update.
+
+<img src="visuals/update-packages.png" width="600">
 
 GitHub
 ======
 
 Go to <https://github.com> and sign up for an account.
-
-Remember your GitHub signup user name, password, and email account.
 
 Git
 ===
@@ -31,8 +33,7 @@ Install Git using the appropriate method for your platform:
 -   Debian/Ubuntu: sudo apt-get install git-core
 -   Fedora/RedHat: sudo yum install git-core
 
-Go to the Git program directory, find Git -\> cmd -\> git-gui.exe. On my Windows machine, I place a shortcut to this file on my desktop.
-
+<!--Go to the Git program directory, find Git -> cmd -> git-gui.exe. On my Windows machine, I place a shortcut to this file on my desktop.-->
 ### Setting your GitHub account information
 
 Go to the Git program directory, find Git -\> git-bash.exe. Run the file.
