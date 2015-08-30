@@ -11,4 +11,4 @@ Richard Layton
 Update R and RStudio
 ====================
 
-[I'm a relative reference to a repository file](updateR.md)
+[try link](/updateR.md)
