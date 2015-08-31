@@ -21,7 +21,7 @@ If R and RStudio are installed, it's probably a good idea to update them.
 -   [update R](http://www.r-statistics.com/2015/06/a-step-by-step-screenshots-tutorial-for-upgrading-r-on-windows/).
 -   To update RStudio, open RStudio. In the *Help* pull-down menu, select *Check for updates*.
 
-    <img src="visuals/update-RStudio.png" width="500">
+    <img src="../visuals/update-RStudio.png" width="500">
 
 <!-- save this for after the .Renviron file is set
 You should probably update your packages too. Open RStudio. Select the *Packages* tab and *Update*. Then *Select All* and *Install Updates*. 
