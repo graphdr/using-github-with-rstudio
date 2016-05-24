@@ -39,7 +39,7 @@ Install Git using the appropriate method for your platform:
 
 Go to the Git program directory, find *git-bash.exe*. Run the file.
 
-In the shell window that appears, type (for your_github_user_name, substitute _your github uer name_),
+In the shell window that appears, type (for your_github_user_name, substitute _your actual github user name_),
 
     git config --global user.name your_github_user_name 
 
