@@ -39,13 +39,13 @@ Install Git using the appropriate method for your platform:
 
 Go to the Git program directory, find *git-bash.exe*. Run the file.
 
-In the shell window that appears, type (but no quotes),
+In the shell window that appears, type (for your_github_user_name, substitute _your github uer name_),
 
-    git config --global user.name "your_github_user_name" 
+    git config --global user.name your_github_user_name 
 
 and return/enter. On the new line, type
 
-    git config --global user.email "your_github_email@somewhere"
+    git config --global user.email your_github_email@somewhere
 
 and return/enter. Close the shell. We're done with Git.
 
