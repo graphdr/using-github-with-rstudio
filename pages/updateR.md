@@ -79,7 +79,7 @@ Assign a name to the repository, short and memorable.
 
 -   If you are creating a repository for an existing R project, use the name of that project directory or create a new (and possibly shorter) name---then on your computer change the name of the directory to match.
 
-<img src="visuals/github-repo-name.png" width="300">
+<img src="../visuals/github-repo-name.png" width="300">
 
 Then click *Create repository*. (You can ignore the initializing options for now.)
 
