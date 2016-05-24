@@ -55,7 +55,7 @@ Open RStudio.
 
 From the *Tools* pull-down menu, select *Global Options*, then *Git/SVN*. In the dialog box for *Git executable*, write the path to the file *git.exe* on your machine. For example, the path on my machine is `C:/Program Files/Git/bin/git.exe`.
 
-<img src="visuals/rstudio-git-svn-dialog-box.png" width="400">
+<img src="../visuals/rstudio-git-svn-dialog-box.png" width="400">
 
 Connecting your local R project to GitHub
 =========================================
