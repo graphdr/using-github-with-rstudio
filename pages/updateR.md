@@ -71,7 +71,7 @@ In both cases, I begin by setting up a new repository ("repo") on GitHub.
 
 Login to GitHub. Select the *Repositories* tab, then *New*.
 
-<img src="visuals/github-new-repo.png" width="500">
+<img src="../visuals/github-new-repo.png" width="500">
 
 Assign a name to the repository, short and memorable.
 
@@ -87,7 +87,7 @@ Then click *Create repository*. (You can ignore the initializing options for now
 
 In RStudio, in the *File* pull-down menu, select *New Project*, then *Version Control*, then *Git*.
 
-<img src="visuals/rstudio-git-repo.png" width="300">
+<img src="../visuals/rstudio-git-repo.png" width="300">
 
 -   Return to your GitHub project repository and find the URL assigned by GitHub. There should be an `HTTPS` label and a URL something like: `https://github.com/your_user_name/test-project.git`. In the text box *Repository URL*, type or paste this URL.
 -   The text box *Project directory name* should automatically populate with the project name, for example, *test-project*.
@@ -120,7 +120,7 @@ In RStudio, launch your test project (if it's not already open), e.g., *test-pro
 
 Select *File*, *New File*, *R Markdown*, and *OK* for the default settings (we'll adjust them later).
 
-<img src="visuals/untitled-rmd.png" width="500">
+<img src="../visuals/untitled-rmd.png" width="500">
 
 Save the untitled document as *README.Rmd* at the top level of the project directory.
 
@@ -138,7 +138,7 @@ Save.
 
 Press the *Knit* button.
 
-<img src="visuals/knit-readme.png" width="400">
+<img src="../visuals/knit-readme.png" width="400">
 
 You can close the markdown window that appears.
 
@@ -155,7 +155,7 @@ In the RStudio Environment pane, select the *Git* tab.
 
 Check the *.gitignore*, *README.md*, and the *filename.Rproj* files to commit to GitHub.
 
-<img src="visuals/first-commit.png" width="250">
+<img src="../visuals/first-commit.png" width="250">
 
 Click the *Commit* button.
 
@@ -167,7 +167,7 @@ Press the *Push* icon. This "pushes" the files you committed to the GitHub repos
 
 Go to you GitHub account. Select the *test-project* repository. You should find the three files you pushed. Ther text of the *README.md* file appears below the list of files.
 
-<img src="visuals/github-initial-commit.png" width="600">
+<img src="../visuals/github-initial-commit.png" width="600">
 
 Editing a local file
 ====================
@@ -201,7 +201,7 @@ If this an existing project,
 
 Run the git-gui.exe file. In the dialog box, Select *Create a New Repository*.  
 
-<img src="visuals/git-gui-exe.png" width="300">
+<img src="../visuals/git-gui-exe.png" width="300">
 
 Browse to the location of the project directory you just created and press the *Create* button. 
 
