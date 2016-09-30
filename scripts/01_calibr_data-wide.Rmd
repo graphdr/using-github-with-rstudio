@@ -113,11 +113,13 @@ table_head[cycle_true] <- cycle_head
 table_head <- gsub("^([a-z])", "\\U\\1", table_head, perl = TRUE)
 ```
 
-Reassign the edited table heading to the data frame. 
+Reassign the edited table heading to the data frame. This might do something else? I'm still learning.
 
 ```{r 01-14}
 # reassign 
 colnames(input_output_data) <- table_head
+
+# are you sure this does what you think it does?
 ```
 
 Print the table as it would appear in the report to check it. 
@@ -126,6 +128,11 @@ Print the table as it would appear in the report to check it.
 # print to check
 kable(input_output_data, caption = "Table 1. Calibration data")
 ```
+
+```{r}
+summary(input_output_data)
+```
+
 
 # Save to file
 
