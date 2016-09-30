@@ -136,6 +136,8 @@ summary(input_output_data)
 
 # Save to file
 
+Save to an CSV. I think CSV is a nice file format.
+
 ```{r 01-16}
 # save active data set for subsequent scripts
 write_csv(data_received, "data/01_calibr_data_active-report.csv")
