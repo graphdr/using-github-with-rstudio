@@ -20,6 +20,9 @@ library(readr)
 
 # Retrieve image of test setup
 
+
+here's some new prose
+
 ```{r 01-03}
 url <- "https://raw.githubusercontent.com/DSR-RHIT/creating-reproducible-reports/gh-pages/resources/load-cell-setup-786x989px.png"
 destination <- "resources/load-cell-setup-786x989px.png"
