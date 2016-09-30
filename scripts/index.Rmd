@@ -1,0 +1,53 @@
+---
+layout: page
+title: workshop
+tagline: reproducible research for the R novice
+description: Introduces R, RStudio, and R Markdown as tools to create
+             a dynamically reproducible report. For R novices. 
+output: 
+  html_document:
+    keep_md: TRUE
+---
+
+Welcome! The goal of the workshop is to introduce the R novice to reproducible research in the context of creating a reproducible report using R, RStudio, and knitr.  
+
+### getting started
+
+- [pre-workshop homework](pages/102_pre-hw.html), should take 30 minutes or less
+- [learning objectives](pages/101_objectives.html) 
+- [workshop agenda](pages/103_agenda.html) 
+
+
+
+
+### tutorials 
+
+- [organize your files](pages/104_organize-files.html)
+- [start your first script](pages/105_first-script.html)
+- [explore the data](pages/109_explore-data.html)
+- [tidy the data](pages/110_tidy-data.html)
+- [create the calibration graph](pages/111_graph.html)
+- [perform a linear regression](pages/112_regression.html) 
+- [write the client report](pages/113_report.html) 
+- [what to do when the data change](pages/117_data-change.html)
+
+### slides 
+
+- [session 1](slides/slides_session_01.html)  
+Surveying the reproducible research ecosystem; identifying manual operations in a sample report; creating a dynamic report.  
+- [session 2](slides/slides_session_02.html)  
+When the data change; two basic principles for reproducible research; where you can go from here.  
+
+
+### additional tutorials for fine-tuning the report
+
+- [adding references](pages/114_reference.html)
+- [formatting docx styles ](http://rmarkdown.rstudio.com/articles_docx.html)
+- [graph extras](pages/116_graph-extras.html)
+
+### acknowledgments 
+
+- [Karl Broman](http://kbroman.org) for his  [tutorials](http://kbroman.org/pages/tutorials.html) that made the creation of these GitHub-hosted webpages *almost* painless 
+- [Jenny Bryan](https://github.com/jennybc) for her [Stats545 material](http://stat545.com/) and for the
+[Good enough practices](https://swcarpentry.github.io/good-enough-practices-in-scientific-computing/) paper for guidance on file naming and directory organization. 
+- [Reproducible Science  Curriculum](https://github.com/Reproducible-Science-Curriculum) contributors for their reproducible research  teaching materials.
